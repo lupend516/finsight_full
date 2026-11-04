@@ -1,0 +1,21 @@
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+
+# JavaScript dependencies and builds
+frontend/node_modules/
+frontend/build/
+frontend/node-compile-cache/
+frontend/phantomjs/
+frontend/uv-*.lock
+
+# Go build output and test artifacts
+backend/bin/
+coverage/
+*.test
+
+# Editor and operating-system files
+.DS_Store
+.idea/
+.vscode/
