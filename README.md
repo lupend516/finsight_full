@@ -104,4 +104,4 @@ The end-to-end local workflow has been verified: account registration, company o
 
 ## Author
 
-Sultan Tajibaev
+Sultanbay Tazhibayev
