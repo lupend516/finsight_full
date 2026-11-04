@@ -36,7 +36,7 @@ cp .env.example .env
 ```
 MONGO_URI=mongodb+srv://username:password@cluster0.xxxxx.mongodb.net/finsight?retryWrites=true&w=majority
 JWT_SECRET=придумай-любую-случайную-строку-32-символа
-PORT=5000
+PORT=5001
 ENV=development
 FRONTEND_URL=http://localhost:3000
 ```
@@ -53,12 +53,12 @@ go run cmd/server/main.go
 ```
 ✅ Connected to MongoDB Atlas!
 ✅ Database indexes ready
-🚀 FinSight backend running on http://localhost:5000
+🚀 FinSight backend running on http://localhost:5001
 ```
 
 **Проверка:**
 ```bash
-curl http://localhost:5000/health
+curl http://localhost:5001/health
 # → {"status":"ok","service":"finsight-backend"}
 ```
 
@@ -73,7 +73,7 @@ cd frontend
 
 # 1. Создай .env файл
 cp .env.example .env
-# Содержимое уже правильное: VITE_API_URL=http://localhost:5000/api
+# Содержимое уже правильное: VITE_API_URL=http://localhost:5001/api
 
 # 2. Установи зависимости
 npm install
@@ -136,10 +136,10 @@ npm run dev
 → Используй другой email или проверь MongoDB Atlas → Collections → users
 
 **Бэкенд не коннектится к MongoDB**
-→ В MongoDB Atlas → Network Access → добавь `0.0.0.0/0` (Allow from anywhere)
+→ В MongoDB Atlas → Network Access → добавь свой текущий IP-адрес. Не открывай доступ для всех адресов без необходимости.
 
 **go mod tidy ошибки**
-→ Убедись что Go версии 1.21+: `go version`
+→ Убедись что Go версии 1.24+: `go version`
 
 ---
 
@@ -150,12 +150,12 @@ npm run dev
 Быстрый тест:
 ```bash
 # Регистрация
-curl -X POST http://localhost:5000/api/auth/register \
+curl -X POST http://localhost:5001/api/auth/register \
   -H "Content-Type: application/json" \
   -d '{"email":"test@test.com","password":"password123","first_name":"Test","last_name":"User"}'
 
 # Логин
-curl -X POST http://localhost:5000/api/auth/login \
+curl -X POST http://localhost:5001/api/auth/login \
   -H "Content-Type: application/json" \
   -d '{"email":"test@test.com","password":"password123"}'
 ```

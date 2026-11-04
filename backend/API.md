@@ -1,6 +1,6 @@
 # FinSight Backend — API Reference
 
-Base URL: `http://localhost:5000/api`
+Base URL: `http://localhost:5001/api`
 
 ---
 
@@ -241,5 +241,5 @@ go mod tidy
 go run cmd/server/main.go
 
 # Проверь
-curl http://localhost:5000/health
+curl http://localhost:5001/health
 ```

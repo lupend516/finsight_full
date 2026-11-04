@@ -1,16 +1,16 @@
 # FinSight
 
-**FinSight** is an AI-assisted financial management platform for small and medium-sized businesses. It helps owners turn bank statements into organized transactions, financial dashboards, P&L reporting, and practical business insights.
+**FinSight** is a financial-management platform for small and medium-sized businesses. It helps owners turn bank statements into organised transactions, financial dashboards, P&L reporting, and practical business insights.
 
 ## Highlights
 
 - Secure registration and JWT-based authentication
 - Company profiles, team roles, invitations, and account settings
 - CSV, Excel, and PDF bank-statement upload
-- Transaction parsing, categorization, review workflow, and custom categories
+- Transaction parsing, rule-based categorisation, review workflow, and custom categories
 - Financial dashboard with income, expenses, profit, cash-flow, and category charts
 - Product, employee, sales, bookkeeping, and P&L modules
-- Business-intelligence forecasts and strategic-reporting screens
+- Business-intelligence forecasts based on historical transaction data
 - Fraud-monitoring and AI-assistant user interfaces
 
 ## Tech stack
@@ -94,6 +94,8 @@ Open [http://localhost:3000](http://localhost:3000).
 
 The end-to-end local workflow has been verified: account registration, company onboarding, MongoDB connection, statement upload, transaction processing, and dashboard visualisation.
 
+The current forecasting, AI-assistant, and fraud-monitoring modules are interface and heuristic-driven features. Production AI and anomaly-detection services are planned next.
+
 ## Roadmap
 
 - Production-grade AI analysis and anomaly detection services
@@ -104,4 +106,4 @@ The end-to-end local workflow has been verified: account registration, company o
 
 ## Author
 
-Sultan Tajibaev
+Sultanbay Tazhibayev
